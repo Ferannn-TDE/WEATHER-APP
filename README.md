@@ -1,13 +1,25 @@
-# React + Vite
+# 🌦️ Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, responsive weather application built with React that fetches real-time weather data for any city using the Visual Crossing Weather API. The app displays current temperature, wind speed, humidity, and a dynamic weather icon based on live conditions.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 City-based weather search
+- 🌡️ Real-time temperature display
+- 💨 Wind speed and 💧 humidity info
+- 🌤️ Dynamic icons based on weather conditions
+- 🖼️ Clean and modern UI with responsive design
+- 🎯 Default city loads on startup (e.g., Lagos)
+- ⌨️ Press **Enter** or click icon to search
+- ❌ Graceful error handling for invalid searches
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# WEATHER-APP
+- React (Vite)
+- JavaScript (ES6+)
+- CSS (Responsive design with `rem` units)
+- Visual Crossing Weather API
+
+## 🔧 Getting Started
+
+🔗 **Live Demo:** [https://your-weather-app-url.com](https://your-weather-app-url.com)
