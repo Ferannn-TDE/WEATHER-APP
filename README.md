@@ -22,4 +22,4 @@ A sleek, responsive weather application built with React that fetches real-time 
 
 ## 🔧 Getting Started
 
-🔗 **Live Demo:** [https://your-weather-app-url.com](https://your-weather-app-url.com)
+🔗 **Live Demo:** [ferans-weather-app-demo.netlify.app](ferans-weather-app-demo.netlify.app)
