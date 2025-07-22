@@ -27,7 +27,7 @@ const Weather = () => {
       return;
     }
     try {
-      const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?key=${
+      const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=us&key=${
         import.meta.env.VITE_APP_ID
       }`;
 
@@ -36,7 +36,7 @@ const Weather = () => {
       console.log(data);
 
       const icon = allIcons[data.currentConditions.icon] || clear_Icon;
-      const windSpeedKmh = data.windspeed;
+      const windSpeedKmh = data.currentConditions.windspeed;
       const windSpeedMph = (windSpeedKmh * 0.621371).toFixed(1);
 
       // Trim resolvedAddress at first comma
@@ -44,7 +44,7 @@ const Weather = () => {
 
       setWeatherData({
         humidity: Math.floor(Number(data.currentConditions.humidity)),
-        windspeed: Math.floor(Number(windSpeedMph)),
+        windspeed: Number(windSpeedMph),
         temperature: Math.floor(Number(data.currentConditions.temp)),
         icon: icon,
         location: trimmedLocation,
