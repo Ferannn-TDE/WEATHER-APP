@@ -36,8 +36,8 @@ const Weather = () => {
       console.log(data);
 
       const icon = allIcons[data.currentConditions.icon] || clear_Icon;
-      const windSpeedKmh = data.currentConditions.windspeed;
-      const windSpeedMph = (windSpeedKmh * 0.621371).toFixed(1);
+      const windSpeedMph = data.currentConditions.windspeed;
+      // const windSpeedMph = (windSpeedKmh * 0.621371).toFixed(1);
 
       // Trim resolvedAddress at first comma
       const trimmedLocation = data.resolvedAddress.split(",")[0];
