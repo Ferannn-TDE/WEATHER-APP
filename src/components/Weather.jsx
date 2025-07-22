@@ -36,13 +36,15 @@ const Weather = () => {
       console.log(data);
 
       const icon = allIcons[data.currentConditions.icon] || clear_Icon;
+      const windSpeedKmh = data.windspeed;
+      const windSpeedMph = (windSpeedKmh * 0.621371).toFixed(1);
 
       // Trim resolvedAddress at first comma
       const trimmedLocation = data.resolvedAddress.split(",")[0];
 
       setWeatherData({
         humidity: Math.floor(Number(data.currentConditions.humidity)),
-        windspeed: Math.floor(Number(data.currentConditions.windspeed)),
+        windspeed: Math.floor(Number(windSpeedMph)),
         temperature: Math.floor(Number(data.currentConditions.temp)),
         icon: icon,
         location: trimmedLocation,
@@ -100,7 +102,7 @@ const Weather = () => {
             <div className="col">
               <img src={wind_Icon} alt="Wind Icon" />
               <div>
-                <p>{weatherData.windspeed} km/h</p>
+                <p>{weatherData.windspeed} miles/h</p>
                 <span>Wind</span>
               </div>
             </div>
